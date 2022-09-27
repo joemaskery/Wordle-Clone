@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Player Stats{% endblock %}</h1>
+  <a class="action" href="{{ url_for('game.index') }}">Play Game</a>
+  <a class="action" href="{{ url_for('game.leaderboard') }}">Leaderboard</a>
+{% endblock %}
+
+{% block content %}
+<div class="alert">
+    <center><p style="color:red">{{ message }}</p></center>
+</div>
+
+    <article class="post">
+          <table id="statstable" class="display">
+            <thead>
+              <tr>
+                <th>Player</th>
+                <th>Joined</th>
+                <th>Played</th>
+                <th>Wins</th>
+                <th>Losses</th>
+                <th>Current Streak</th>
+                <th>Longest Streak</th>
+              </tr>
+            </thead>
+            <tbody>
+            {% for stat in player_stats %}
+
+              <tr>
+                <td><a href="{{ url_for('game.morestats', user=stat['username']) }}">{{ stat['username'] }}</a></td>
+                <td>{{ stat['joined'].strftime('%Y-%m-%d') }}</td>
+                <td>{{ stat['played'] }}</td>
+                <td>{{ stat['wins'] }}</td>
+                <td>{{ stat['losses'] }}</td>
+                <td>{{ stat['streak'] }}</td>
+                <td>{{ stat['longstreak'] }}</td>
+              </tr>
+            {% endfor %}
+            </tbody>
+          </table>
+    </article>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{{url_for('static', filename='jquery.js') }}">\x3C/script>')</script>
+
+    <script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+
+    <script>
+        $(document).ready( function () {
+            $('#statstable').DataTable({
+                order: [[0, 'asc']],
+                columnDefs: [{
+                    targets: "_all",
+                    className: 'dt-body-center'
+                    }]
+                });
+            } );
+
+    </script>
+
+{% endblock %}

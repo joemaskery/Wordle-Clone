@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}{{ user }} Player Profile{% endblock %}</h1>
+  <a class="action" href="{{ url_for('game.stats') }}">Player Stats</a>
+  <a class="action" href="{{ url_for('game.index') }}">Play Game</a>
+  <a class="action" href="{{ url_for('game.leaderboard') }}">Leaderboard</a>
+{% endblock %}
+
+{% block content %}
+<br>
+<div class="wrapper">
+    <div class="cLeft">
+        <b>Joined:</b> {{ career_stats[0] }}
+        <br>
+        <b>Account Age:</b> {{ career_stats[1] }}
+    </div>
+
+    <div class="cRight">
+        <b>Games Played:</b> {{ career_stats[2] }}
+        <br>
+        <b>Total Play Time:</b> {{ career_stats[3] }}
+    </div>
+</div>
+
+<br><br>
+
+<div class="wrapper">
+    <div class="cLeft">
+        <b>Fastest Time:</b> {{ time_stats[0] }}
+        <br>
+        <b>Average Time:</b> {{ time_stats[1] }}
+        <br>
+        <b>Longest Time:</b> {{ time_stats[2] }}
+    </div>
+
+    <div class="cRight">
+        <b>Average Guesses:</b> {{ guess_stats[0] }}
+        <br>
+        <b>Total Guesses:</b> {{ guess_stats[1] }}
+    </div>
+</div>
+
+<br><br>
+
+<canvas id="guessChart" width="400" height="150">
+        <p>Chart unavailable</p>
+</canvas>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script>
+        const guessCount = {{ guess_stats[2] }};
+        const chartColours = ['#66ff33', '#ffff66', '#ff9933', '#ff0000', '#6666ff', '#6600cc', '#DCDCDC'];
+
+        const ctx = document.getElementById('guessChart').getContext('2d');
+        const myChart = new Chart(ctx, {
+            type: 'horizontalBar',
+            data: {
+                labels: ['1', '2', '3', '4', '5', '6', 'Losses'],
+                datasets: [{
+                    data: [...guessCount],
+                    backgroundColor: [...chartColours],
+                    borderColor: [...chartColours],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'SCORE DISTRIBUTION'
+                }
+                ,
+                legend: {
+                    display: false
+                 },
+                scales: {
+                    xAxes: [{
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Frequency',
+                            fontStyle: 'bold'
+                          },
+                        display: true,
+                        ticks: {
+                            beginAtZero: true,
+                            callback: function(value) {if (value % 1 === 0) {return value;}}
+                        }
+                    }],
+                    yAxes: [{
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Score',
+                            fontStyle: 'bold'
+                          }
+                    }]
+                }
+            }
+        });
+    </script>
+
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Leaderboard{% endblock %}</h1>
+  <a class="action" href="{{ url_for('game.stats') }}">Player Stats</a>
+  <a class="action" href="{{ url_for('game.index') }}">Play Game</a>
+{% endblock %}
+
+{% block content %}
+<br>
+    <article class="post">
+          <table id="scoretable" class="display">
+            <thead>
+              <tr>
+                <th>Player</th>
+                <th>Word</th>
+                <th>Guesses</th>
+                <th>Time (mm:ss:mmm)</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody>
+            {% for score in scores %}
+              <tr>
+                <td>{{ score['username'] }}</td>
+                <td>{{ score['word'] }}</td>
+                <td>{{ score['guesses'] }}</td>
+                <td>{{ score['game_time'] }}</td>
+                <td>{{ score['created'].strftime('%Y-%m-%d') }}</td>
+              </tr>
+            {% endfor %}
+            </tbody>
+          </table>
+    </article>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{{url_for('static', filename='jquery.js') }}">\x3C/script>')</script>
+
+    <script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+
+    <script>
+        $(document).ready( function () {
+            $('#scoretable').DataTable({
+                order: [[4, 'desc']],
+                columnDefs: [{
+                    targets: "_all",
+                    className: 'dt-body-center'
+                    }],
+                });
+            });
+    </script>
+
+{% endblock %}
