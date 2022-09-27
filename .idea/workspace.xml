@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="968c6ffa-3ab8-4c86-92e9-bf9e0f11785c" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="2E2TAvI2uWojxYygds4fyrJeFOv" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/wordle/static" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/wordle/static" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.codility2">
+    <configuration name="codility" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="flask_wordle" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/wordle" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/wordle/codility.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="codility2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="flask_wordle" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/wordle" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/wordle/codility2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.codility2" />
+        <item itemvalue="Python.codility" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="968c6ffa-3ab8-4c86-92e9-bf9e0f11785c" name="Default Changelist" comment="" />
+      <created>1661792539973</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1661792539973</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="184" y="86" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1664012324132">
+      <screen x="0" y="25" width="1440" height="804" />
+    </state>
+    <state x="184" y="86" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1440.804@0.25.1440.804" timestamp="1664012324132" />
+    <state x="430" y="234" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1662226943752">
+      <screen x="0" y="25" width="1440" height="804" />
+    </state>
+    <state x="430" y="234" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1440.804@0.25.1440.804" timestamp="1662226943752" />
+    <state width="1440" height="211" key="GridCell.Tab.0.bottom" timestamp="1664032350994">
+      <screen x="0" y="25" width="1440" height="804" />
+    </state>
+    <state width="1440" height="211" key="GridCell.Tab.0.bottom/0.25.1440.804@0.25.1440.804" timestamp="1664032350994" />
+    <state width="1440" height="211" key="GridCell.Tab.0.center" timestamp="1664032350994">
+      <screen x="0" y="25" width="1440" height="804" />
+    </state>
+    <state width="1440" height="211" key="GridCell.Tab.0.center/0.25.1440.804@0.25.1440.804" timestamp="1664032350994" />
+    <state width="1440" height="211" key="GridCell.Tab.0.left" timestamp="1664032350993">
+      <screen x="0" y="25" width="1440" height="804" />
+    </state>
+    <state width="1440" height="211" key="GridCell.Tab.0.left/0.25.1440.804@0.25.1440.804" timestamp="1664032350993" />
+    <state width="1440" height="211" key="GridCell.Tab.0.right" timestamp="1664032350994">
+      <screen x="0" y="25" width="1440" height="804" />
+    </state>
+    <state width="1440" height="211" key="GridCell.Tab.0.right/0.25.1440.804@0.25.1440.804" timestamp="1664032350994" />
+    <state x="229" y="63" key="SettingsEditor" timestamp="1662567705678">
+      <screen x="0" y="25" width="1440" height="804" />
+    </state>
+    <state x="229" y="63" key="SettingsEditor/0.25.1440.804@0.25.1440.804" timestamp="1662567705678" />
+    <state x="385" y="153" width="670" height="676" key="search.everywhere.popup" timestamp="1663784371610">
+      <screen x="0" y="25" width="1440" height="804" />
+    </state>
+    <state x="385" y="153" width="670" height="676" key="search.everywhere.popup/0.25.1440.804@0.25.1440.804" timestamp="1663784371610" />
+  </component>
+</project>
